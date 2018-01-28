@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+    Co
+-->
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<!-- This is a wide open CSP declaration. To lock this down for production, see below.<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src * 'unsafe-inline'; script-src * 'unsafe-inline'" /> -->
+
+		<!-- Good default declaration:
+		* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+		* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly<meta http-equiv="Content-Security-Policy" content="default-src https:">
+		* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+			* Enable inline JS: add 'unsafe-inline' to default-src
+			* Enable eval(): add 'unsafe-eval' to default-src
+		* Create your own at http://cspisawesome.com
+		-->
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+		<link href="js/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>
+		<link href="js/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>-->
+		<!--<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript" ></script>
+
+
+		<title>kombanjan</title>
+
+	</head>
+
+	<body >
+		<div  data-role="page"  id="one">
+			<div data-role="tabs">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#byr" data-theme="a" data-ajax="false">Whip</a></li>
+						<li><a href="#byd" data-theme="b" data-ajax="false">Horn</a></li>
+					</ul>
+				</div>
+				<div class="ui-content" id="byr" >
+					<div id="stats"class="ui-content ui-textinput-autogrow-resize"></div>
+					<button class="ui-btn ui-btn-b" onclick="app.onBtnClick()"> reset </button>
+					<select name="flip-2" id="f1" data-role="flipswitch" data-theme="b">
+						        <option value="1">horn</option>
+						        <option value="0">whip</option>
+						    </select>
+					<audio src="res/whip.m4a" autostart="false" style="" id="w"></audio>
+					<audio src="res/horn.m4a" autostart="false" style="" id="horn"></audio>
+				</div>
+				<div class="ui-content" id="byd">
+
+				</div>
+			</div>
+
+
+		</div>
+		<div data-role="page"  id="mp">
+		</div>
+
+		<!--<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script><script type="text/javascript" src="cordova.js"></script>key=AIzaSyAjfk6vHUJsuVvFcw1SLMPBLWFaITiz2LQ-->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+
+			app.initialize();
+		</script>
+
+	</body>
+
+</html>

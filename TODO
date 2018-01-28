@@ -1,0 +1,24 @@
+
+# GOALS::
+ ->-> app that aids users in find taxis routes,
+ ->-> must show the track the route,
+
+create php location manager
+ -> design MYSQL database,
+ -> design the functionlity,
+app 
+ -> redesign the user interface to suit the user specs
+ -> design websql (sqlite),
+ -> build the features,
+ -> intergrate RouteBuilder, 
+ -> autoload maps, after start;
+
+:::TECH STACK:::
+Web SQL
+JQUERY mobile
+Google Maps api
+
+:::EXTRA:::
+create logo
+create app icons
+
